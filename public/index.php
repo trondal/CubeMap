@@ -1,6 +1,13 @@
 <?php
 
-namespace CubeMap\Mvc;
+use CubeMap\Mvc\CompositeView;
+use CubeMap\Mvc\Dispatcher;
+use CubeMap\Mvc\FrontController;
+use CubeMap\Mvc\Request;
+use CubeMap\Mvc\Response;
+use CubeMap\Mvc\Route;
+use CubeMap\Mvc\Router;
+use CubeMap\Mvc\View;
 
 chdir(dirname(__DIR__));
 

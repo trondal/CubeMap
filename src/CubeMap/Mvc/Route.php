@@ -30,4 +30,8 @@ class Route {
     public function getMethod() {
         return $this->method;
     }
+
+    public function getPath() {
+        return $this->path;
+    }
 }

@@ -6,7 +6,9 @@ class Dispatcher {
 
     public function dispatch($route, $request, $response = null) {
         $controller = $route->getController();
-        $controller->dispatch($route, $request, $response);
+        $view = $controller->dispatch($route, $request, $response);
+
+        echo $view->render();
     }
 
 }
