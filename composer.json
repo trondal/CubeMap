@@ -1,0 +1,9 @@
+{
+    "name": "CubeMap",
+    "require": {},
+    "autoload": {
+        "psr-0": {
+            "CubeMap\\": "src"
+        }
+    }
+}
