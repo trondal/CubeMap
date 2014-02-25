@@ -2,7 +2,7 @@
 
 namespace CubeMap\Entity;
 
-class Box {
+class Cube {
 
     private $color;
 

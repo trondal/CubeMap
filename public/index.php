@@ -1,13 +1,11 @@
 <?php
 
-use CubeMap\Mvc\CompositeView;
 use CubeMap\Mvc\Dispatcher;
 use CubeMap\Mvc\FrontController;
 use CubeMap\Mvc\Request;
 use CubeMap\Mvc\Response;
 use CubeMap\Mvc\Route;
 use CubeMap\Mvc\Router;
-use CubeMap\Mvc\View;
 
 chdir(dirname(__DIR__));
 
@@ -19,12 +17,8 @@ $request = new Request();
 $response = new Response();
 
 $route = $options['router']['route'];
-$route1 = new Route($route['index']['path'],
-        $route['index']['controller'],
-        $route['index']['action']);
-$route2 = new Route($route['test']['path'],
-        $route['test']['controller'],
-        $route['test']['action']);
+$route1 = new Route($route['index']['path'], $route['index']['controller'], $route['index']['action']);
+$route2 = new Route($route['test']['path'], $route['test']['controller'], $route['test']['action']);
 
 $router = new Router(array($route1, $route2));
 $dispatcher = new Dispatcher();

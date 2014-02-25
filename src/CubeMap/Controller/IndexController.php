@@ -9,10 +9,14 @@ class IndexController extends AbstractActionController {
 
     public function indexAction() {
         $header = new View('index/header');
-        $header->value = 'My Fancy Header';
+        $header->value = 'My Fancy Header2';
         $this->view->attachView($header);
 
         $this->view->message = 'My index message';
+        echo '<pre>';
+        print_r($this->view);
+        exit;
+
         return $this->view;
      }
 
