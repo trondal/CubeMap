@@ -1,6 +1,6 @@
 <?php
 
-namespace CubeMap\Mvc;
+namespace CubeMap\Mvc\View;
 
 class CompositeView {
 

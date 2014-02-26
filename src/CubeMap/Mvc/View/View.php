@@ -1,8 +1,10 @@
 <?php
 
-namespace CubeMap\Mvc;
+namespace CubeMap\Mvc\View;
 
 use Closure;
+use CubeMap\Mvc\View\ContainerInterface;
+use CubeMap\Mvc\View\TemplateInterface;
 use InvalidArgumentException;
 
 class View implements TemplateInterface, ContainerInterface, ViewInterface {

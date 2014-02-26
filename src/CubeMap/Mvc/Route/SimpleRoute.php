@@ -1,11 +1,13 @@
 <?php
 
-namespace CubeMap\Mvc;
+namespace CubeMap\Mvc\Route;
+
+use CubeMap\Mvc\RequestInterface;
 
 /**
  * It is the routes responsibility to be able to match a request
  */
-class Route {
+class SimpleRoute implements RouteInterface {
 
     protected $path;
     protected $controller;
@@ -17,7 +19,7 @@ class Route {
         $this->method = $action;
     }
 
-    public function match(Request $request) {
+    public function matches(RequestInterface $request) {
         $path = trim(parse_url($request->getUri(), PHP_URL_PATH), '/');
 
         return ($this->path === $path);
@@ -34,4 +36,5 @@ class Route {
     public function getPath() {
         return $this->path;
     }
+
 }
