@@ -65,7 +65,6 @@ class View implements TemplateInterface, ContainerInterface, ViewInterface {
         return $this;
     }
 
-
     public function render() {
         extract($this->fields);
         ob_start();

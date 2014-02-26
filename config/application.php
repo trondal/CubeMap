@@ -2,21 +2,30 @@
 
 return array(
     'router' => array(
-        'route' => array(
+        'routes' => array(
             'home' => array(
-              'path' => '',
-              'controller' => 'CubeMap\Controller\IndexController',
-              'action' => 'index'
+                'type' => 'CubeMap\Mvc\Route\SimpleRoute',
+                'options' => array(
+                    'path' => 'foo',
+                    'controller' => 'CubeMap\Controller\IndexController',
+                    'action' => 'index'
+                )
             ),
             'index' => array(
-                'path' => 'index/index',
-                'controller' => 'CubeMap\Controller\IndexController',
-                'action' => 'index'
+                'type' => 'CubeMap\Mvc\Route\SimpleRoute',
+                'options' => array(
+                    'path' => 'index/index',
+                    'controller' => 'CubeMap\Controller\IndexController',
+                    'action' => 'index'
+                )
             ),
             'test' => array(
-                'path' => 'index/test',
-                'controller' => 'CubeMap\Controller\IndexController',
-                'action' => 'test'
+                'type' => 'CubeMap\Mvc\Route\SimpleRoute',
+                'options' => array(
+                    'path' => 'index/test',
+                    'controller' => 'CubeMap\Controller\IndexController',
+                    'action' => 'test'
+                )
             )
         )
     )

@@ -1,6 +1,11 @@
 {
-    "name": "CubeMap",
-    "require": {},
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "name": "trondal/cubemap",
+    "description": "A demo of Cubes, created on a minimal MVC framework",
+    "require-dev": {
+        "phpunit/phpunit" : "3.7.*"
+    },
     "autoload": {
         "psr-0": {
             "CubeMap\\": "src"

@@ -4,8 +4,6 @@ use CubeMap\Mvc\Controller\Dispatcher;
 use CubeMap\Mvc\Controller\FrontController;
 use CubeMap\Mvc\Http\Request as HttpRequest;
 use CubeMap\Mvc\Http\Response;
-use CubeMap\Mvc\Route\SimpleRoute;
-use CubeMap\Mvc\Route\FiFoRouter;
 use CubeMap\Mvc\View\View;
 
 chdir(dirname(__DIR__));
@@ -26,11 +24,9 @@ $request = new HttpRequest(
 
 $response = new Response(Response::VERSION_11);
 
-$route = $options['router']['route'];
-$route1 = new SimpleRoute($route['home']['path'], $route['home']['controller'], $route['home']['action']);
-$route2 = new SimpleRoute($route['index']['path'], $route['index']['controller'], $route['index']['action']);
-$route3 = new SimpleRoute($route['test']['path'], $route['test']['controller'], $route['test']['action']);
-$router = new FiFoRouter(array($route1, $route2, $route3));
+$routerFactory = new \CubeMap\Mvc\Route\Factory\RouterFactory();
+$router = $routerFactory->createService();
+
 $view = new View();
 
 $dispatcher = new Dispatcher();
