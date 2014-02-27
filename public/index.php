@@ -1,10 +1,10 @@
 <?php
 
-use CubeMap\Mvc\Controller\Dispatcher;
-use CubeMap\Mvc\Controller\FrontController;
-use CubeMap\Mvc\Http\Request as HttpRequest;
-use CubeMap\Mvc\Http\Response;
-use CubeMap\Mvc\View\View;
+use Sorry\Mvc\Controller\Dispatcher;
+use Sorry\Mvc\Controller\FrontController;
+use Sorry\Mvc\Http\Request as HttpRequest;
+use Sorry\Mvc\Http\Response;
+use Sorry\Mvc\View\View;
 
 chdir(dirname(__DIR__));
 
@@ -24,7 +24,7 @@ $request = new HttpRequest(
 
 $response = new Response(Response::VERSION_11);
 
-$routerFactory = new \CubeMap\Mvc\Route\Factory\RouterFactory();
+$routerFactory = new \Sorry\Mvc\Route\Factory\RouterFactory();
 $router = $routerFactory->createService();
 
 $view = new View();

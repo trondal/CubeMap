@@ -2,13 +2,13 @@
 
 namespace CubeMap\Controller;
 
-use CubeMap\Mvc\Controller\AbstractActionController;
+use Sorry\Mvc\Controller\AbstractActionController;
 
 class IndexController extends AbstractActionController {
 
     public function indexAction() {
-        $this->view->message = $this->getRequest()->getParam('GET', 'id');
-     }
+        $this->view->message = $this->getRequest()->fromQuery('message');
+    }
 
     public function testAction() {
         $this->view->test = 'This is an test!';

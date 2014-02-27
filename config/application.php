@@ -4,27 +4,33 @@ return array(
     'router' => array(
         'routes' => array(
             'home' => array(
-                'type' => 'CubeMap\Mvc\Route\SimpleRoute',
+                'type' => 'Sorry\Mvc\Route\LiteralRoute',
                 'options' => array(
-                    'path' => 'foo',
-                    'controller' => 'CubeMap\Controller\IndexController',
-                    'action' => 'index'
+                    'route' => '/',
+                    'defaults' => array(
+                        'controller' => 'CubeMap\Controller\IndexController',
+                        'action' => 'index'
+                    )
                 )
             ),
             'index' => array(
-                'type' => 'CubeMap\Mvc\Route\SimpleRoute',
+                'type' => 'Sorry\Mvc\Route\LiteralRoute',
                 'options' => array(
-                    'path' => 'index/index',
-                    'controller' => 'CubeMap\Controller\IndexController',
-                    'action' => 'index'
+                    'route' => 'index/index',
+                    'defaults' => array(
+                        'controller' => 'CubeMap\Controller\IndexController',
+                        'action' => 'index'
+                    )
                 )
             ),
             'test' => array(
-                'type' => 'CubeMap\Mvc\Route\SimpleRoute',
+                'type' => 'Sorry\Mvc\Route\LiteralRoute',
                 'options' => array(
-                    'path' => 'index/test',
-                    'controller' => 'CubeMap\Controller\IndexController',
-                    'action' => 'test'
+                    'route' => 'index/test',
+                    'defaults' => array(
+                        'controller' => 'CubeMap\Controller\IndexController',
+                        'action' => 'test',
+                    )
                 )
             )
         )
